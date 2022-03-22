@@ -6,6 +6,18 @@ import styles from "./styles";
 import { ArrowRight } from "@mui/icons-material";
 import { ListItemText } from "@mui/material";
 
+/**
+ * [使い方]
+ * DND可能な領域のコンポーネント（DroppableContainer）と、DND可能なコンポーネント（DroppableBase）を
+ * 親子関係でネストさせてあげる
+ *
+ * [メリット]
+ * - 拡張性が高そう
+ * - UXがきれい
+ *
+ * [デメリット]
+ * - DropResultで受け取るため、実装者がよしなに調整する必要がある
+ */
 export const ReactBeautifulDnd: React.FC = () => {
   const [listItems, setListItems] = useState([
     { id: "1", label: "item 1" },
